@@ -22,11 +22,11 @@ html {
 }
 
 h1 {
-  font-family: ind.$font-penakut;
+  font-family: ind.$font-incubus;
 }
 
 h2 {
-  font-family: ind.$font-penakut;
+  font-family: ind.$font-incubus;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
@@ -108,7 +108,7 @@ a {
 }
 
 .big-header {
-  font-family: ind.$font-penakut;
+  font-family: ind.$font-incubus;
   font-size: 5rem;
   @include ind.breakpoints-max(md) {
     font-size: 4rem;
@@ -116,7 +116,7 @@ a {
 }
 
 .small-header {
-  font-family: ind.$font-penakut;
+  font-family: ind.$font-incubus;
   font-size: 2.5rem;
   @include ind.breakpoints-max(md) {
     font-size: 1.8rem;

@@ -1,0 +1,25 @@
+@use "../index" as i;
+
+.footer {
+  background-color: i.$dark-grey;
+  h2 {
+    @include i.font-poppins(b);
+    font-size: 2rem;
+    color: i.$red;
+  }
+
+  .social {
+    text-align: center;
+    margin-top: 50px;
+    li {
+      display: inline-block;
+      margin: 0 10px;
+    }
+  }
+
+  span {
+    display: block;
+    text-align: center;
+    font-size: .8rem;
+  }
+}

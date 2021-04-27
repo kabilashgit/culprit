@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap);@import url(https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap);@charset "UTF-8";
 /* Add your custom fonts here */
 /*
     Created on : 6 November, 2019, 1:40:12 PM
@@ -8,6 +8,14 @@
   font-family: "penakut";
   src: url("../fonts/penakut.eot");
   src: url("../fonts/penakut.eot?#iefix") format("embedded-opentype"), url("../fonts/penakut.svg#penakut") format("svg"), url("../fonts/penakut.ttf") format("truetype"), url("../fonts/penakut.woff") format("woff"), url("../fonts/penakut.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Incubus";
+  src: url("../fonts/Incubus.eot");
+  src: url("../fonts/Incubus.eot?#iefix") format("embedded-opentype"), url("../fonts/Incubus.svg#Incubus") format("svg"), url("../fonts/Incubus.ttf") format("truetype"), url("../fonts/Incubus.woff") format("woff"), url("../fonts/Incubus.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11310,11 +11318,11 @@ html {
 }
 
 h1 {
-  font-family: "penakut", sans-serif;
+  font-family: "Incubus", sans-serif;
 }
 
 h2 {
-  font-family: "penakut", sans-serif;
+  font-family: "Incubus", sans-serif;
   font-size: 2.5rem;
   margin-bottom: 2.5rem;
 }
@@ -11387,7 +11395,7 @@ a:hover {
 }
 
 .big-header {
-  font-family: "penakut", sans-serif;
+  font-family: "Incubus", sans-serif;
   font-size: 5rem;
 }
 @media (max-width: 767px) {
@@ -11397,7 +11405,7 @@ a:hover {
 }
 
 .small-header {
-  font-family: "penakut", sans-serif;
+  font-family: "Incubus", sans-serif;
   font-size: 2.5rem;
 }
 @media (max-width: 767px) {
@@ -11515,8 +11523,8 @@ nav .menu-top-level-2 {
 }
 @media (min-width: 991px) {
   .home-banner .owl-carousel .item .inner .big-header {
-    font-size: 7rem;
-    line-height: 7rem;
+    font-size: 5rem;
+    line-height: 5rem;
   }
 }
 .home-banner .owl-carousel .item .inner .small-header {
@@ -11543,6 +11551,29 @@ nav .menu-top-level-2 {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+.footer {
+  background-color: #212121;
+}
+.footer h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2rem;
+  color: #ce252f;
+}
+.footer .social {
+  text-align: center;
+  margin-top: 50px;
+}
+.footer .social li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.footer span {
+  display: block;
+  text-align: center;
+  font-size: 0.8rem;
 }
 
 /* reset */

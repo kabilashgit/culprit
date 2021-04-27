@@ -12,4 +12,19 @@
   font-display: swap;
 }
 
+@font-face {
+  font-family: 'Incubus';
+  src: url('../fonts/Incubus.eot');
+  src: url('../fonts/Incubus.eot?#iefix') format('embedded-opentype'),
+  url('../fonts/Incubus.svg#Incubus') format('svg'),
+  url('../fonts/Incubus.ttf') format('truetype'),
+  url('../fonts/Incubus.woff') format('woff'),
+  url('../fonts/Incubus.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&display=swap');
