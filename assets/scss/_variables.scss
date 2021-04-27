@@ -1,19 +1,38 @@
-// Font FuturaBt Regular - Bold
-$font-ft-bold: 'FuturaBT-Bold', sans-serif;
+
+// Font penakut Regular
+$font-penakut: 'penakut', sans-serif;
+
+// Font Poppins - Light, Regular, Medium & Bold
+$font-poppins: 'Poppins', sans-serif;
+
 
 // primary colors
 $black: #000000;
 $white: #ffffff;
-$yellow: #fee252;
-$red: #fb292a;
-$dark-red: #e9212d;
-$green: #4d9d1a;
-$dark-green: #008240;
-$light-grey: #aaaaaa;
-$lightest-grey: #ecedf0;
-$dark-grey: #3a3a3a;
-$blue: #142543;
+$red: #ce252f;
+$menu-grey: #292929;
+$dark-grey: #212121;
+$light-grey: #808080;
 
+$colors-list: (
+  white: #fff,
+  black: #000,
+  menu-grey: #292929,
+  dark-grey: #212121,
+  light-grey: #808080,
+  red: #d61818
+);
+
+$font-weight: (
+  l: 300,
+  light: 300,
+  r: 400,
+  regular: 400,
+  m: 500,
+  medium: 500,
+  b: 600,
+  bold: 600
+);
 
 // Grid Breakpoints
 $grid-breakpoints: (

@@ -1,0 +1,48 @@
+@use "../index" as ind;
+
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999999;
+  ul {
+    display: flex;
+    margin-bottom: 0;
+    li {
+      margin-left: .8rem;
+      margin-right: .8rem;
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      a {
+        color: ind.$white;
+
+        &:hover {
+          color: ind.$light-grey;
+        }
+      }
+    }
+  }
+
+  .menu-top-level {
+    padding: .7rem 0;
+    &-1 {
+      border-bottom: 1px solid ind.$red;
+      background-color: ind.$black;
+    }
+
+    &-2 {
+      background-color: ind.$menu-grey;
+      @include ind.breakpoints-max(md) {
+        ul {
+          li {
+            margin-right: .8rem;
+          }
+        }
+      }
+    }
+  }
+}

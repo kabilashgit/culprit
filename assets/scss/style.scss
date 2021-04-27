@@ -1,7 +1,147 @@
-@import "mixins";
-@import "fonts";
-@import "variables";
-@import "reset";
-@import "~bootstrap";
-@import "global";
-@import "section-styles/header-banner";
+@use "index" as ind;
+
+/* reset */
+@forward "reset";
+
+/* 3rd Party plugins css*/
+@use "/~bootstrap/scss/bootstrap";
+@use "/~owl.carousel.es6/src/scss/owl.carousel";
+@use "/~@fancyapps/fancybox";
+
+/* global */
+@forward "global";
+
+/* components */
+@use "components/navigation";
+@use "components/header-banner";
+
+/* Home page */
+
+.home-category {
+  background-color: ind.$black;
+
+  &.section-padding-y {
+    @include ind.breakpoints-min(sm) {
+      padding: 150px 0;
+    }
+  }
+
+  .img-wrapper {
+    display: inline-block;
+    img {
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      text-align: center;
+      color: ind.$white;
+    }
+
+    &:hover {
+      h2 {
+        color: ind.$red;
+      }
+    }
+  }
+}
+
+.home-offers {
+  background-color: ind.$dark-grey;
+
+  .owl-carousel {
+    .item {
+      img {
+        border-radius: 15px;
+      }
+    }
+  }
+}
+
+.home-testimonial {
+  background-color: ind.$red;
+  .owl-carousel {
+    .item {
+      padding: 50px 25px;
+      background-color: ind.$dark-grey;
+      border-radius: 15px;
+
+      @include ind.breakpoints-min(xl) {
+        width: 60%;
+        margin: 0 auto;
+      }
+
+      p {
+        font-size: .9rem;
+        @include ind.breakpoints-max(sm) {
+          border-top: 1px solid ind.$red;
+          padding-top: 15px;
+          margin-top: 15px;
+        }
+      }
+
+      span {
+        display: block;
+        text-align: center;
+        font-size: .8rem;
+        &.name {
+          @include ind.font-poppins(m);
+          color: ind.$red;
+        }
+      }
+    }
+  }
+}
+
+.home-newsletter {
+  background-color: ind.$red;
+  padding: 15px 0;
+
+  .small-header {
+    font-size: 1.5rem;
+  }
+
+  input {
+    background-color: transparent;
+    border: none;
+    margin: 0 15px;
+    &::placeholder {
+      font-family: ind.$font-penakut;
+    }
+
+    &:focus-visible {
+      outline: none;
+      border: none;
+      border-bottom: 1px solid ind.$white;
+    }
+  }
+}
+
+.home-criminals {
+  background-color: ind.$black;
+
+  a {
+    text-decoration: none;
+    color: ind.$white;
+    .img-wrapper {
+      span {
+        display: block;
+        text-align: center;
+        font-size: .8rem;
+        &.name {
+          @include ind.font-poppins(m);
+          color: ind.$red;
+        }
+      }
+    }
+  }
+}
+
+.criminal-popup {
+  display: none;
+  max-width: 500px;
+  color: ind.$black;
+
+  h2 {
+    color: ind.$black;
+  }
+}

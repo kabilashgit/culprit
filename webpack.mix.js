@@ -6,11 +6,8 @@ mix.options({
 
 mix.disableNotifications();
 
-mix.sass('./assets/scss/style.scss', './assets/css/all.min.css');
+mix.sass('assets/scss/style.scss', 'assets/css/all.min.css');
 
 
-mix.js('./assets/js/custom.js', './assets/js/all.min.js')
-    .autoload({
-      jquery: ['$', 'window.jQuery', 'jQuery']
-    })
+mix.js('assets/js/custom.js', 'assets/js/all.min.js')
     .sourceMaps();

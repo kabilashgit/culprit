@@ -1,0 +1,32 @@
+@use "variables" as v;
+@use "mixins" as m;
+
+// Nav height
+$nav-height-lg: 120px;
+$nav-height-sm: 111px;
+
+@mixin nav-height($value:d) {
+  @if($value == h) {
+    height: calc(100vh - 120px);
+    @include m.breakpoints-max(md) {
+      height: calc(100vh - 111px);
+    }
+  }
+  @else if($value == d) {
+    margin-top: $nav-height-lg;
+    @include m.breakpoints-max(md) {
+      margin-top: $nav-height-sm;
+    }
+  }
+}
+
+@mixin font-poppins($f:r) {
+
+  font-family: v.$font-poppins;
+  font-weight: map-get(v.$font-weight, $f);
+
+  @if ((map-has-key(v.$font-weight, $f)) != true) {
+    font-weight: map-get(v.$font-weight, r);
+  }
+
+}

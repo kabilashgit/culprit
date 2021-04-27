@@ -1,7 +1,34 @@
+@use "index" as ind;
+
+html {
+  font-size: 16px;
+  @include ind.breakpoints-max(md) {
+    font-size: 14px;
+  }
+}
+
+@each $key, $val in ind.$colors-list {
+  $col: null;
+  @if (($key == green) or ($key == orange)) {
+    $col: ind.$white;
+  }
+  .bg--#{"" + $key} {
+    background-color: $val !important;
+    color: $col !important;
+  }
+  .text--#{"" + $key} {
+    background-color: $val !important;
+  }
+}
+
 h1 {
+  font-family: ind.$font-penakut;
 }
 
 h2 {
+  font-family: ind.$font-penakut;
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
 }
 
 h3 {
@@ -11,33 +38,21 @@ h4 {
 }
 
 p {
-    font-size: 20px;
-    line-height: 25px;
-    margin-bottom: 15px;
+  font-size: 1rem;
 }
 
 ul, ol {
   li {
-    font-size: 20px;
-    line-height: 25px;
     ul, ol {
-      margin-left: 25px;
     }
   }
 }
 
 body {
-  background: $light-grey;
-  position: relative;
-  //font-family: $font-ft-bold;
-  margin-top: 80px;
-  min-height: calc(100vh - 80px);
-  text-transform: uppercase;
-  @include breakpoints-max(sm) {
-    margin-top: 60px;
-    min-height: calc(100vh - 60px);
-  }
+  font-family: ind.$font-poppins;
+  color: ind.$white;
   overflow-x: hidden;
+  @include ind.nav-height;
 }
 
 a {
@@ -45,132 +60,126 @@ a {
         color: inherit;
     }
 }
-// Commonly used background colors
-.bg {
-  &-red{
-    background-color: $red !important;
-  }
-  &-yellow{
-    background-color: $yellow !important;
-  }
-  &-green{
-    background-color: $green !important;
-  }
-  &-white{
-    background-color: $white !important;
-  }
-  &-grey{
-    background-color: $lightest-grey !important;
-  }
-  &-dark-green{
-    background-color: $dark-green !important;
-  }
-}
-
-/* Commonly used text colors */
-.text {
-  &-red {
-    color: $red !important;
-  }
-  &-yellow {
-    color: $yellow !important;
-  }
-  &-green {
-    color: $green !important;
-  }
-  &-white {
-    color: $white !important;
-  }
-  &-black {
-    color: $black !important;
-  }
-}
 
 // No Scroll
 .no-scroll {
   overflow: hidden;
 }
 
-.section-padding {
-    padding: 50px 15px;
+.nav-next-section {
+  @include ind.nav-height;
 }
 
-/* Commonly used text colors */
-.text {
-    &-red {
-        color: $red !important;
-    }
-    &-yellow {
-        color: $yellow !important;
-    }
-    &-green {
-        color: $green !important;
-    }
-    &-white {
-        color: $white !important;
-    }
-    &-black {
-        color: $black !important;
-    }
+.section-padding-y {
+  padding: 100px 0;
+
+  @include ind.breakpoints-max(md) {
+    padding: 50px 0;
+  }
 }
 
-/* owl carousel navigation center align and
-with animation */
+.btn {
+  @include ind.font-poppins(b);
+  font-size: 1rem;
+  display: inline-block;
+  box-shadow: none;
+  color: ind.$red;
+  padding: .8em 2em;
 
-//.owl-carousel {
-//  overflow-x: hidden;
-//  .owl-nav {
-//    position: absolute;
-//    top: 50%;
-//    left: 0;
-//    right: 0;
-//    transform: translateY(-50%);
-//    .owl-prev {
-//      border-bottom-right-radius: 15px;
-//      border-top-right-radius: 15px;
-//      position: absolute;
-//      left: 0;
-//      opacity: .4;
-//      transition: opacity .25s ease-in-out;
-//      &:hover {
-//        opacity: 1;
-//      }
-//      &:focus {
-//        outline: none;
-//      }
-//      i {
-//        font-size: 15px;
-//        padding: 15px !important;
-//        display: inline-block;
-//        line-height: 0;
-//      }
-//      @include breakpoints-max(md) {
-//        opacity: 1;
-//      }
-//    }
-//    .owl-next {
-//      border-bottom-left-radius: 15px;
-//      border-top-left-radius: 15px;
-//      position: absolute;
-//      right: 0;
-//      opacity: .4;
-//      transition: opacity .25s ease-in-out;
-//      &:hover {
-//        opacity: 1;
-//      }
-//      &:focus {
-//        outline: none;
-//      }
-//      i {
-//        font-size: 15px;
-//        padding: 15px !important;
-//        display: inline-block;
-//        line-height: 0;
-//      }
-//      @include breakpoints-max(md) {
-//        opacity: 1;
-//      }
-//    }
-//  }
-//}
+  &:focus {
+    box-shadow: none;
+  }
 
+  &-box {
+    border: 1px solid ind.$red;
+    border-radius: 0;
+    background-color: ind.$dark-grey;
+
+    &--small {
+      font-size: .8em;
+    }
+
+    &:hover {
+      background-color: ind.$red;
+      color: ind.$white;
+    }
+
+  }
+}
+
+.big-header {
+  font-family: ind.$font-penakut;
+  font-size: 5rem;
+  @include ind.breakpoints-max(md) {
+    font-size: 4rem;
+  }
+}
+
+.small-header {
+  font-family: ind.$font-penakut;
+  font-size: 2.5rem;
+  @include ind.breakpoints-max(md) {
+    font-size: 1.8rem;
+  }
+}
+
+.owl-carousel {
+
+  .item {
+    img {
+      width: auto;
+      max-width: 100%;
+    }
+  }
+  .owl-dots {
+    margin-top: 25px;
+    text-align: center;
+    .owl-dot {
+      margin: 0 3px;
+      span {
+        display: inline-block;
+        width: 5px;
+        height: 5px;
+        background-color: ind.$light-grey;
+        border-radius: 15px;
+      }
+
+      &.active {
+        span {
+          background-color: ind.$white;
+        }
+      }
+    }
+  }
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+    right: -5%;
+    left: -5%;
+    transform: translateY(-50%);
+
+    [class^=owl-] {
+      position: absolute;
+
+      span {
+        font-size: 60px;
+        line-height: 0;
+      }
+
+      &.disabled {
+        span {
+          opacity: .2;
+        }
+      }
+    }
+
+    .owl-prev {
+      left: 0;
+    }
+
+    .owl-next {
+      right: 0;
+    }
+  }
+}

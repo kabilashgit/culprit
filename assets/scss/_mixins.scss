@@ -2,6 +2,8 @@
     Created on : 6 November, 2019, 1:40:12 PM
     Author     : Manikandan K
 */
+@use "variables" as v;
+
 @mixin keyframes($animation-name) {
   @-webkit-keyframes #{$animation-name} {
     @content;
@@ -23,8 +25,8 @@
 }
 
 @mixin breakpoints-min($min) {
-  @if (map_has_key($grid-breakpoints, $min)) {
-    @media (min-width: #{map-get($grid-breakpoints, $min)}) {
+  @if (map_has_key(v.$grid-breakpoints, $min)) {
+    @media (min-width: #{map-get(v.$grid-breakpoints, $min)}) {
       @content;
     }
   } @else {
@@ -35,8 +37,8 @@
 }
 
 @mixin breakpoints-max($max) {
-  @if (map_has_key($grid-breakpoints, $max)) {
-    @media (max-width: #{map-get($grid-breakpoints, $max)}) {
+  @if (map_has_key(v.$grid-breakpoints, $max)) {
+    @media (max-width: #{map-get(v.$grid-breakpoints, $max)}) {
       @content;
     }
   } @else {
@@ -47,19 +49,19 @@
 }
 
 @mixin breakpoints-min-max($min, $max) {
-  $min-v: map_has_key($grid-breakpoints, $min);
-  $max-v: map_has_key($grid-breakpoints, $max);
+  $min-v: map_has_key(v.$grid-breakpoints, $min);
+  $max-v: map_has_key(v.$grid-breakpoints, $max);
 
   @if ($min-v == true and $max-v == true) {
-    @media(min-width: #{map-get($grid-breakpoints, $min)}) and (max-width: #{map-get($grid-breakpoints, $max)}) {
+    @media(min-width: #{map-get(v.$grid-breakpoints, $min)}) and (max-width: #{map-get(v.$grid-breakpoints, $max)}) {
       @content;
     }
   } @else if ($min-v == true and $max-v == false) {
-    @media(min-width: #{map-get($grid-breakpoints, $min)}) and (max-width: #{$max}) {
+    @media(min-width: #{map-get(v.$grid-breakpoints, $min)}) and (max-width: #{$max}) {
       @content;
     }
   } @else if ($min-v == false and $max-v == true) {
-    @media(min-width: #{$min}) and (max-width: #{map-get($grid-breakpoints, $max)}) {
+    @media(min-width: #{$min}) and (max-width: #{map-get(v.$grid-breakpoints, $max)}) {
       @content;
     }
   }
@@ -72,6 +74,5 @@
 
 @mixin background-gradient($dir, $from, $to) {
   background-image:
-          -webkit-linear-gradient($dir, $from, $to),
+    -webkit-linear-gradient($dir, $from, $to),
 }
-
