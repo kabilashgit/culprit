@@ -2,8 +2,9 @@
 
 .footer {
   background-color: i.$dark-grey;
+  padding: 50px 0;
   h2 {
-    @include i.font-poppins(b);
+    font-family: i.$font-incubus;
     font-size: 2rem;
     color: i.$red;
   }

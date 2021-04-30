@@ -21,14 +21,56 @@ nav {
         color: ind.$white;
 
         &:hover {
-          color: ind.$light-grey;
+          text-decoration: none;
+          color: ind.$white;
+        }
+
+
+        .wrapper {
+          position: relative;
+
+          .badge {
+            position: absolute;
+            left: 0;
+            background: ind.$red  ;
+            bottom: 0;
+            font-size: .6rem;
+            border-radius: 15px;
+          }
         }
       }
+
+      .dropdown-menu {
+        background-color: ind.$menu-grey;
+        border-radius: 0;
+        top: 7px !important;
+        padding: 0;
+        border-top: 1px solid rgba(ind.$white, .5);
+        @include ind.breakpoints-max(sm) {
+          top: 5px !important;
+        }
+
+        a.dropdown-item {
+          color: ind.$white;
+
+          @include ind.breakpoints-max(sm) {
+            font-size: 1.2rem;
+            padding-top: 0.5rem;
+            padding-bottom: 0.5rem;
+          }
+
+          &:hover, &:focus {
+            background-color: ind.$red;
+            color: ind.$white;
+          }
+        }
+      }
+
     }
   }
 
   .menu-top-level {
-    padding: .7rem 0;
+    padding: .55rem 0;
     &-1 {
       border-bottom: 1px solid ind.$red;
       background-color: ind.$black;
@@ -40,6 +82,59 @@ nav {
         ul {
           li {
             margin-right: .8rem;
+          }
+        }
+      }
+      [class^="icon-"], [class*=" icon-"] {
+        font-size: 2rem;
+      }
+
+      /* search */
+      .search-wrapper {
+
+        &::before {
+          font-family: ind.$font-icomoon;
+          content: "\e903";
+          position: absolute;
+          left: 5px;
+          bottom: 0;
+          font-size: 2rem;
+          color: ind.$white;
+        }
+
+        input {
+          background: rgba(ind.$dark-grey, .8);
+          border: none;
+          border-bottom: 1px solid ind.$white;
+          color: white;
+          padding: 10px 10px 10px 50px;
+          font-size: 1rem;
+          width: 100%;
+
+          &:focus-visible {
+            border: none;
+            border-bottom: 1px solid ind.$white;
+            outline: none;
+          }
+        }
+        position: absolute;
+        top: -15px;
+        right: 0;
+        width: 50%;
+        opacity: 0;
+        z-index: -1;
+        transition: all .25s ease-in-out;
+        @include ind.breakpoints-max(sm) {
+          left: 0;
+          width: 100%;
+        }
+
+        &.open {
+          top: 45px;
+          opacity: 1 !important;
+
+          @include ind.breakpoints-max(sm) {
+            top: 38px;
           }
         }
       }

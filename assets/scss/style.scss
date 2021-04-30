@@ -29,6 +29,8 @@
 
   .img-wrapper {
     display: inline-block;
+    filter: grayscale(1);
+    transition: filter .15s linear;
     img {
       margin-bottom: 2rem;
     }
@@ -39,6 +41,7 @@
     }
 
     &:hover {
+      filter: grayscale(0);
       h2 {
         color: ind.$red;
       }
@@ -55,11 +58,28 @@
         border-radius: 15px;
       }
     }
+
+    .owl-nav {
+
+      [class^=owl-]:not(.disabled) {
+        transform: rotate(0);
+        transition: transform .25s linear;
+        transform-style: preserve-3d;
+        &:active {
+          transform: rotate(90deg);
+        }
+      }
+    }
+
   }
 }
 
 .home-testimonial {
   background-color: ind.$red;
+  background-image: url('../images/home/bg-testimonial.png');
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: repeat;
   .owl-carousel {
     .item {
       padding: 50px 25px;

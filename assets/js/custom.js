@@ -8,7 +8,11 @@ require('@fancyapps/fancybox');
 
 
 $(function () {
-  console.log('hello')
+
+  $('nav #lens-icon').on('click', function () {
+    $('nav .search-wrapper').toggleClass('open');
+  });
+
 });
 
 $(window).on('load', function () {
@@ -30,6 +34,7 @@ $(window).on('load', function () {
     margin: 25,
     dots: true,
     nav: false,
+    navText: ['<i class="icon-locker"></i>', '<i class="icon-locker"></i>'],
     autoplay: false,
     mouseDrag: true,
     touchDrag: true,

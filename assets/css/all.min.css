@@ -20,6 +20,57 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon/icomoon.eot?v17cme");
+  src: url("../fonts/icomoon/icomoon.eot?v17cme#iefix") format("embedded-opentype"), url("../fonts/icomoon/icomoon.ttf?v17cme") format("truetype"), url("../fonts/icomoon/icomoon.woff?v17cme") format("woff"), url("../fonts/icomoon/icomoon.svg?v17cme#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-wishlist:before {
+  content: "\E900";
+  color: #fff;
+}
+
+.icon-locker:before {
+  content: "\E901";
+  color: #fff;
+}
+
+.icon-profile:before {
+  content: "\E902";
+  color: #fff;
+}
+
+.icon-search:before {
+  content: "\E903";
+  color: #fff;
+}
+
+.icon-add-to-cart:before {
+  content: "\E904";
+  color: #fff;
+}
+
+.icon-lens:before {
+  content: "\E905";
+}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -11419,6 +11470,9 @@ a:hover {
   max-width: 100%;
 }
 .owl-carousel .owl-dots {
+  position: absolute;
+  left: 0;
+  right: 0;
   margin-top: 25px;
   text-align: center;
 }
@@ -11441,6 +11495,7 @@ a:hover {
   right: -5%;
   left: -5%;
   transform: translateY(-50%);
+  height: 32px;
 }
 .owl-carousel .owl-nav [class^=owl-] {
   position: absolute;
@@ -11449,8 +11504,11 @@ a:hover {
   font-size: 60px;
   line-height: 0;
 }
-.owl-carousel .owl-nav [class^=owl-].disabled span {
+.owl-carousel .owl-nav [class^=owl-].disabled span, .owl-carousel .owl-nav [class^=owl-].disabled i {
   opacity: 0.2;
+}
+.owl-carousel .owl-nav [class^=owl-] [class^=icon-], .owl-carousel .owl-nav [class^=owl-] [class*=" icon-"] {
+  font-size: 2rem;
 }
 .owl-carousel .owl-nav .owl-prev {
   left: 0;
@@ -11481,10 +11539,48 @@ nav ul li a {
   color: #ffffff;
 }
 nav ul li a:hover {
-  color: #808080;
+  text-decoration: none;
+  color: #ffffff;
+}
+nav ul li a .wrapper {
+  position: relative;
+}
+nav ul li a .wrapper .badge {
+  position: absolute;
+  left: 0;
+  background: #ce252f;
+  bottom: 0;
+  font-size: 0.6rem;
+  border-radius: 15px;
+}
+nav ul li .dropdown-menu {
+  background-color: #292929;
+  border-radius: 0;
+  top: 7px !important;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+}
+@media (max-width: 575px) {
+  nav ul li .dropdown-menu {
+    top: 5px !important;
+  }
+}
+nav ul li .dropdown-menu a.dropdown-item {
+  color: #ffffff;
+}
+@media (max-width: 575px) {
+  nav ul li .dropdown-menu a.dropdown-item {
+    font-size: 1.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+}
+nav ul li .dropdown-menu a.dropdown-item:hover, nav ul li .dropdown-menu a.dropdown-item:focus {
+  background-color: #ce252f;
+  color: #ffffff;
 }
 nav .menu-top-level {
-  padding: 0.7rem 0;
+  padding: 0.55rem 0;
 }
 nav .menu-top-level-1 {
   border-bottom: 1px solid #ce252f;
@@ -11492,10 +11588,61 @@ nav .menu-top-level-1 {
 }
 nav .menu-top-level-2 {
   background-color: #292929;
+  /* search */
 }
 @media (max-width: 767px) {
   nav .menu-top-level-2 ul li {
     margin-right: 0.8rem;
+  }
+}
+nav .menu-top-level-2 [class^=icon-], nav .menu-top-level-2 [class*=" icon-"] {
+  font-size: 2rem;
+}
+nav .menu-top-level-2 .search-wrapper {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: -1;
+  transition: all 0.25s ease-in-out;
+}
+nav .menu-top-level-2 .search-wrapper::before {
+  font-family: "icomoon";
+  content: "\E903";
+  position: absolute;
+  left: 5px;
+  bottom: 0;
+  font-size: 2rem;
+  color: #ffffff;
+}
+nav .menu-top-level-2 .search-wrapper input {
+  background: rgba(33, 33, 33, 0.8);
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  color: white;
+  padding: 10px 10px 10px 50px;
+  font-size: 1rem;
+  width: 100%;
+}
+nav .menu-top-level-2 .search-wrapper input:focus-visible {
+  border: none;
+  border-bottom: 1px solid #ffffff;
+  outline: none;
+}
+@media (max-width: 575px) {
+  nav .menu-top-level-2 .search-wrapper {
+    left: 0;
+    width: 100%;
+  }
+}
+nav .menu-top-level-2 .search-wrapper.open {
+  top: 45px;
+  opacity: 1 !important;
+}
+@media (max-width: 575px) {
+  nav .menu-top-level-2 .search-wrapper.open {
+    top: 38px;
   }
 }
 
@@ -11521,6 +11668,9 @@ nav .menu-top-level-2 {
     padding: 1.5rem;
   }
 }
+.home-banner .owl-carousel .item .inner .big-header {
+  text-shadow: 5px 5px 5px #000000;
+}
 @media (min-width: 991px) {
   .home-banner .owl-carousel .item .inner .big-header {
     font-size: 5rem;
@@ -11529,6 +11679,7 @@ nav .menu-top-level-2 {
 }
 .home-banner .owl-carousel .item .inner .small-header {
   font-size: 2.5rem;
+  text-shadow: 5px 5px 5px #000000;
 }
 .home-banner .owl-carousel .item.pos-top .inner {
   top: 0;
@@ -11555,10 +11706,10 @@ nav .menu-top-level-2 {
 
 .footer {
   background-color: #212121;
+  padding: 50px 0;
 }
 .footer h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-family: "Incubus", sans-serif;
   font-size: 2rem;
   color: #ce252f;
 }
@@ -11591,6 +11742,8 @@ nav .menu-top-level-2 {
 }
 .home-category .img-wrapper {
   display: inline-block;
+  filter: grayscale(1);
+  transition: filter 0.15s linear;
 }
 .home-category .img-wrapper img {
   margin-bottom: 2rem;
@@ -11598,6 +11751,9 @@ nav .menu-top-level-2 {
 .home-category .img-wrapper h2 {
   text-align: center;
   color: #ffffff;
+}
+.home-category .img-wrapper:hover {
+  filter: grayscale(0);
 }
 .home-category .img-wrapper:hover h2 {
   color: #ce252f;
@@ -11609,9 +11765,21 @@ nav .menu-top-level-2 {
 .home-offers .owl-carousel .item img {
   border-radius: 15px;
 }
+.home-offers .owl-carousel .owl-nav [class^=owl-]:not(.disabled) {
+  transform: rotate(0);
+  transition: transform 0.25s linear;
+  transform-style: preserve-3d;
+}
+.home-offers .owl-carousel .owl-nav [class^=owl-]:not(.disabled):active {
+  transform: rotate(90deg);
+}
 
 .home-testimonial {
   background-color: #ce252f;
+  background-image: url("../images/home/bg-testimonial.png");
+  background-size: contain;
+  background-position: bottom center;
+  background-repeat: repeat;
 }
 .home-testimonial .owl-carousel .item {
   padding: 50px 25px;

@@ -51,19 +51,19 @@
     <div class="row justify-content-center">
       <div class="col-lg-4 text-center">
         <div class="img-wrapper">
-          <img src="https://place-hold.it/450x500" class="img-fluid d-block mx-auto" alt="">
+          <img src="assets/images/home/people.jpg" class="img-fluid d-block mx-auto" alt="">
           <h2>Mr Culprit</h2>
         </div>
       </div>
       <div class="col-lg-4 text-center">
         <div class="img-wrapper">
-          <img src="https://place-hold.it/450x500" class="img-fluid d-block mx-auto" alt="">
+          <img src="assets/images/home/image-2.png" class="img-fluid d-block mx-auto" alt="">
           <h2>Ms Culprit</h2>
         </div>
       </div>
       <div class="col-lg-4 text-center">
         <div class="img-wrapper">
-          <img src="https://place-hold.it/450x500" class="img-fluid d-block mx-auto" alt="">
+          <img src="assets/images/home/image-3.png" class="img-fluid d-block mx-auto" alt="">
           <h2>Gifting</h2>
         </div>
       </div>
@@ -76,22 +76,22 @@
     <h2 class="text-center">Offers</h2>
     <div class="owl-carousel owl-theme">
       <div class="item">
-        <img src="https://place-hold.it/400x250" class="img-fluid d-block mx-auto" alt="">
+        <img src="assets/images/home/offer-1.png" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/400x250" class="img-fluid d-block mx-auto" alt="">
+        <img src="assets/images/home/offer-2.png" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/400x250" class="img-fluid d-block mx-auto" alt="">
+        <img src="assets/images/home/offer-3.png" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/400x250" class="img-fluid d-block mx-auto" alt="">
+        <img src="https://place-hold.it/513x299" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/400x250" class="img-fluid d-block mx-auto" alt="">
+        <img src="https://place-hold.it/513x299" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/400x250" class="img-fluid d-block mx-auto" alt="">
+        <img src="https://place-hold.it/513x299" class="img-fluid d-block mx-auto" alt="">
       </div>
     </div>
   </div>
@@ -146,7 +146,7 @@
   <div class="col-11 mx-auto">
     <div class="text-center">
       <span class="small-header">Join Our Newsletter</span>
-      <input class="small-header" type="text" name="newsletterSignup" id="newsletterSignup" placeholder="Enter your news letter">
+      <input class="small-header" type="text" name="newsletterSignup" id="newsletterSignup" placeholder="Enter your email id">
     </div>
   </div>
 </section>
