@@ -85,13 +85,13 @@
         <img src="assets/images/home/offer-3.png" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/513x299" class="img-fluid d-block mx-auto" alt="">
+        <img src="https://place-hold.it/495x280" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/513x299" class="img-fluid d-block mx-auto" alt="">
+        <img src="https://place-hold.it/495x280" class="img-fluid d-block mx-auto" alt="">
       </div>
       <div class="item">
-        <img src="https://place-hold.it/513x299" class="img-fluid d-block mx-auto" alt="">
+        <img src="https://place-hold.it/495x280" class="img-fluid d-block mx-auto" alt="">
       </div>
     </div>
   </div>
@@ -227,7 +227,7 @@
   </div>
 </section>
 
-<footer class="footer section-padding-y">
+<footer class="footer">
   <div class="col-11 mx-auto">
     <div class="row">
       <div class="col-md-4 text-center">
