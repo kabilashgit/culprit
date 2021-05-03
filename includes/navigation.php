@@ -3,7 +3,9 @@
     <div class="col-11 mx-auto">
       <div class="row no-gutters justify-content-between align-items-center">
         <div class="col-6">
-          <img src="assets/images/logo.png" class="img-fluid" alt="">
+          <a href="/">
+            <img src="assets/images/logo.png" class="img-fluid" alt="">
+          </a>
         </div>
         <div class="col-auto">
           <ul>

@@ -50,22 +50,28 @@
   <div class="col-11 mx-auto">
     <div class="row justify-content-center">
       <div class="col-lg-4 text-center">
-        <div class="img-wrapper">
-          <img src="assets/images/home/people.jpg" class="img-fluid d-block mx-auto" alt="">
-          <h2>Mr Culprit</h2>
-        </div>
+        <a href="product-listing-page.php">
+          <div class="img-wrapper">
+            <img src="assets/images/home/people.jpg" class="img-fluid d-block mx-auto" alt="">
+            <h2>Mr Culprit</h2>
+          </div>
+        </a>
       </div>
       <div class="col-lg-4 text-center">
-        <div class="img-wrapper">
+        <a href="product-listing-page.php">
+          <div class="img-wrapper">
           <img src="assets/images/home/image-2.png" class="img-fluid d-block mx-auto" alt="">
           <h2>Ms Culprit</h2>
         </div>
+        </a>
       </div>
       <div class="col-lg-4 text-center">
-        <div class="img-wrapper">
+        <a href="product-listing-page.php">
+          <div class="img-wrapper">
           <img src="assets/images/home/image-3.png" class="img-fluid d-block mx-auto" alt="">
           <h2>Gifting</h2>
         </div>
+        </a>
       </div>
     </div>
   </div>
@@ -202,23 +208,23 @@
         </a>
       </div>
 
-      <div class="criminal-popup" id="criminal-1">
+      <div class="home-criminal-popup" id="criminal-1">
         <h2 data-selectable="true">Ciao!</h2>
         <p data-selectable="true">Sometimes you would want to disable "touch" feature. <br />For example, when you want to make your content selectable.</p>
       </div>
-      <div class="criminal-popup" id="criminal-2">
+      <div class="home-criminal-popup" id="criminal-2">
         <h2 data-selectable="true">Ciao!</h2>
         <p data-selectable="true">Sometimes you would want to disable "touch" feature. <br />For example, when you want to make your content selectable.</p>
       </div>
-      <div class="criminal-popup" id="criminal-3">
+      <div class="home-criminal-popup" id="criminal-3">
         <h2 data-selectable="true">Ciao!</h2>
         <p data-selectable="true">Sometimes you would want to disable "touch" feature. <br />For example, when you want to make your content selectable.</p>
       </div>
-      <div class="criminal-popup" id="criminal-4">
+      <div class="home-criminal-popup" id="criminal-4">
         <h2 data-selectable="true">Ciao!</h2>
         <p data-selectable="true">Sometimes you would want to disable "touch" feature. <br />For example, when you want to make your content selectable.</p>
       </div>
-      <div class="criminal-popup" id="criminal-5">
+      <div class="home-criminal-popup" id="criminal-5">
         <h2 data-selectable="true">Ciao!</h2>
         <p data-selectable="true">Sometimes you would want to disable "touch" feature. <br />For example, when you want to make your content selectable.</p>
       </div>
@@ -227,49 +233,4 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="col-11 mx-auto">
-    <div class="row">
-      <div class="col-md-4 text-center">
-        <h2>History</h2>
-      </div>
-      <div class="col-md-4 text-center">
-        <h2>Culprit Rules</h2>
-      </div>
-      <div class="col-md-4 text-center">
-        <h2>Complaints</h2>
-      </div>
-    </div>
-
-    <ul class="social">
-      <li>
-        <a href="javascript:void(0);">
-          <img src="https://place-hold.it/25" alt="">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0);">
-          <img src="https://place-hold.it/25" alt="">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0);">
-          <img src="https://place-hold.it/25" alt="">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0);">
-          <img src="https://place-hold.it/25" alt="">
-        </a>
-      </li>
-      <li>
-        <a href="javascript:void(0);">
-          <img src="https://place-hold.it/25" alt="">
-        </a>
-      </li>
-    </ul>
-
-    <span class="copyright">&copy; All Rights Reserved</span>
-  </div>
-</footer>
 <?php include "includes/footer-assets.php"; ?>

@@ -17,7 +17,7 @@ html {
     color: $col !important;
   }
   .text--#{"" + $key} {
-    background-color: $val !important;
+    color: $val !important;
   }
 }
 
@@ -32,6 +32,8 @@ h2 {
 }
 
 h3 {
+  @include ind.font-poppins(r);
+  font-size: 1.3rem;
 }
 
 h4 {
@@ -75,6 +77,13 @@ a {
 
   @include ind.breakpoints-max(md) {
     padding: 50px 0;
+  }
+}
+
+.rupees {
+  fill: ind.$white;
+  path {
+    fill: ind.$white;
   }
 }
 
