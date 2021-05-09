@@ -57,6 +57,12 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-ruppee:before {
+  content: "\e906";
+}
+.icon-ruppee-striked:before {
+  content: "\e907";
+}
 .icon-wishlist:before {
   content: "\e900";
   color: #fff;

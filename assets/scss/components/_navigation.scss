@@ -5,7 +5,7 @@ nav {
   top: 0;
   left: 0;
   right: 0;
-  z-index: 9999999;
+  z-index: 9999;
   ul {
     display: flex;
     margin-bottom: 0;
@@ -103,7 +103,7 @@ nav {
         }
 
         input {
-          background: rgba(ind.$dark-grey, .8);
+          background: rgba(ind.$red, 1);
           border: none;
           border-bottom: 1px solid ind.$white;
           color: white;
@@ -116,6 +116,10 @@ nav {
             border-bottom: 1px solid ind.$white;
             outline: none;
           }
+
+          //&::selection {
+          //  background-color: ind.$white;
+          //}
         }
         position: absolute;
         top: -15px;

@@ -1,0 +1,325 @@
+@use "../index" as ind;
+
+.product-details-section {
+  background-color: ind.$black;
+
+  &.section-padding-y {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .wrapper {
+    .owl-carousel#productGallery {
+      .item {
+        position: relative;
+        overflow: hidden;
+        //border: 1px solid ind.$red;
+        height: 0;
+        padding-top: 133.33333333333331%;
+
+        .bg-img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          z-index: 2;
+          width: 100%;
+          height: 100%;
+          border-radius: 10px;
+          background-repeat: no-repeat;
+          background-position: 0 0;
+          background-origin: border-box;
+          background-size: cover;
+          transition: transform .4s;
+          will-change: transform;
+        }
+      }
+
+      .owl-nav {
+        z-index: 1;
+        left: 0;
+        right: 0;
+        [class^=owl-] {
+          line-height: 1rem;
+          background: rgba(ind.$black, .7);
+          &.disabled {
+            background: rgba(ind.$black, .1);
+            cursor: default;
+          }
+
+          span {
+            display: inline-block;
+            padding: 15px 5px;
+          }
+        }
+      }
+
+      .owl-dots {
+        position: relative;
+      }
+    }
+  }
+
+  .product-details-info {
+    padding: 25px;
+
+    h2 {
+      @include ind.font-poppins(r);
+      margin-bottom: 5px;
+    }
+
+    h3 {
+      font-size: 1.7rem;
+      margin-bottom: 15px;
+    }
+
+    .price {
+      @include ind.font-poppins(bold);
+      font-size: 1.7rem;
+
+      span {
+        @include ind.font-poppins(l);
+        font-size: .9rem;
+        display: inline-block;
+        margin-left: 5px;
+      }
+
+      &:before {
+        font-family: ind.$font-icomoon;
+        content: "\e906";
+        font-size: 1.3rem;
+        margin-right: 5px;
+      }
+    }
+
+    .color-options {
+      li {
+        display: inline-block;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        margin-right: 15px;
+        border: 1px solid ind.$light-grey;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        a {
+          display: inline-block;
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+
+    ul.size-options {
+      font-size: 0;
+
+      li {
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: 50px;
+        height: 50px;
+        border: 1px solid ind.$dark-grey;
+        margin-right: 5px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+
+        a {
+          font-size: 1rem;
+          color: ind.$white;
+          height: 100%;
+          display: inline-block;
+          width: 100%;
+          padding-top: 30%;
+
+          &.active {
+            background-color: ind.$red;
+          }
+
+          &:hover {
+            text-decoration: none;
+          }
+        }
+
+        span {
+          position: absolute;
+
+          &.disabled {
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            background-color: rgba(ind.$white, 0.8);
+            z-index: 2;
+            cursor: default;
+
+            .striked {
+              top: 50%;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: ind.$black;
+              transform: rotate(-45deg);
+              z-index: 3;
+            }
+          }
+
+          &:not(.disabled) {
+            bottom: -5px;
+            display: inline-block;
+            background-color: ind.$light-grey;
+            color: ind.$black;
+            font-size: .7rem;
+            left: 0;
+            right: 0;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .action-icons {
+      margin-top: 50px;
+
+      ul {
+        font-size: 0;
+
+        li {
+          display: inline-block;
+          margin-right: 5px;
+
+          a {
+            display: inline-block;
+            padding: .5rem .3rem 0.3rem;
+            border: 1px solid ind.$red;
+
+            &:hover {
+              text-decoration: none;
+            }
+
+            i {
+              font-size: 2.5rem;
+            }
+          }
+        }
+      }
+
+      .btn-box {
+        display: block;
+        width: 100%;
+      }
+    }
+
+    .product-description {
+      margin-top: 50px;
+    }
+
+  }
+
+  .similar-products {
+    .owl-carousel {
+      .owl-dots {
+        position: relative;
+      }
+    }
+  }
+
+  .customer-reviews {
+    .star-rating-wrapper {
+      .clearfix {
+
+        &:before, &:after {
+          display: table;
+          content: " ";
+        }
+
+        &:after {
+          clear: both;
+        }
+
+      }
+
+      .icon {
+        width: 1em;
+        height: 1em;
+        vertical-align: -.15em;
+        fill: currentColor;
+        overflow: hidden
+      }
+
+      .rate_wrapper {
+        position: relative
+      }
+
+      .rate_box {
+        display: inline-block
+      }
+
+      .rate_item {
+        float: left;
+        cursor: pointer;
+        font-size: 0;
+        line-height: 1
+      }
+
+      .rate_text {
+        display: inline-block;
+        vertical-align: top;
+        line-height: 1;
+        margin-left: 15px
+      }
+    }
+
+    ul.user-review {
+      padding: 15px 0;
+      //max-height: 500px;
+      overflow: auto;
+
+      li {
+        margin-bottom: 15px;
+        border-bottom: 1px solid rgba(ind.$red, .3);
+
+        &:last-child {
+          border-bottom: none;
+        }
+
+        p {
+          font-size: .9rem;
+        }
+
+        span {
+          display: inline-block;
+          color: ind.$light-grey;
+          font-size: .8rem;
+          margin-bottom: .3rem;
+        }
+      }
+    }
+
+    .btn-box--small {
+      border-radius: 0;
+      border: 1px solid ind.$red;
+      &:hover {
+        background-color: ind.$red;
+        color: ind.$white;
+      }
+    }
+  }
+}
+
+.fancybox-image {
+  @include ind.breakpoints-max(md) {
+    width: 80%;
+    right: 0;
+    margin: 0 auto;
+    height: auto;
+  }
+}
+
+.fancybox-thumbs {
+  a {
+    height: 150px;
+  }
+}

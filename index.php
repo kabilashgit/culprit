@@ -152,7 +152,10 @@
   <div class="col-11 mx-auto">
     <div class="text-center">
       <span class="small-header">Join Our Newsletter</span>
-      <input class="small-header" type="text" name="newsletterSignup" id="newsletterSignup" placeholder="Enter your email id">
+      <span class="d-inline-block">
+        <input class="small-header" type="text" name="newsletterSignup" id="newsletterSignup" placeholder="Enter your email id">
+      <button class="btn btn-box">GO</button>
+      </span>
     </div>
   </div>
 </section>

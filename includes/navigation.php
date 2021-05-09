@@ -20,13 +20,12 @@
   <div class="menu-top-level menu-top-level-2">
     <div class="col-11 mx-auto">
       <ul class="justify-content-between justify-content-sm-end">
-        <li title="Search"><a href="javascript:void(0);"><span class="icon-lens" id="lens-icon"></span>
+        <li title="Search"><a href="javascript:void(0);"><span class="icon-lens" id="lens-icon"></span></a>
 
             <span class="search-wrapper" style="opacity: 0;">
               <input type="text" name="navSearch" id="navSearch" placeholder="Search">
               </span>
-
-          </a></li>
+          </li>
         <li title="Wishlist">
           <a href="javascript:void(0);">
             <span class="wrapper">

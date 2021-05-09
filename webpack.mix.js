@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+require('laravel-mix-purgecss');
 
 mix.options({
   processCssUrls: false
@@ -6,7 +7,8 @@ mix.options({
 
 mix.disableNotifications();
 
-mix.sass('assets/scss/style.scss', 'assets/css/all.min.css');
+mix.sass('assets/scss/style.scss', 'assets/css/all.min.css')
+    .purgeCss();
 
 
 mix.js('assets/js/custom.js', 'assets/js/all.min.js')
